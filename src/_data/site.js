@@ -1,3 +1,3 @@
 export default {
-  baseurl: process.env.BASE_PATH || '',
+  baseUrl: process.env.BASE_PATH || '',
 };

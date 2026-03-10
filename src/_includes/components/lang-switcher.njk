@@ -1,4 +1,13 @@
-<div class="floating-lang-switcher" x-data="langSwitcher('{{ lang.code }}', '{{ page.url }}', '{{ site.baseurl }}')">
+<div
+  class="floating-lang-switcher"
+  :class="{ 'is-visible': visible }"
+  x-data="{
+    ...langSwitcher('{{ lang.code }}', '{{ page.url }}', '{{ site.baseUrl }}'),
+    visible: false,
+    init() {
+      setTimeout(() => this.visible = true, 200)
+    }
+  }">
   <button
     class="lang-toggle-btn"
     @click="switchLang()"
@@ -6,27 +15,23 @@
     <img
       :src="flag"
       :key="lang"
+      class="flag-png"
       x-transition:enter="flag-enter"
       x-transition:enter-start="flag-enter-start"
       x-transition:enter-end="flag-enter-end"
       x-transition:leave="flag-leave"
       x-transition:leave-start="flag-leave-start"
-      x-transition:leave-end="flag-leave-end"
-      class="flag-png" />
+      x-transition:leave-end="flag-leave-end" />
   </button>
 </div>
 
 <script>
   function langSwitcher(currentLang, currentUrl, baseUrl) {
-    console.log('currentLang ' + currentLang);
-    console.log('currentUrl ' + currentUrl);
-    console.log('baseUrl ' + baseUrl);
-
     return {
       lang: currentLang,
 
       get flag() {
-        return `${baseUrl}/icons/${this.lang}.png`;
+        return `${baseUrl}/assets/icons/${this.lang}.png`;
       },
 
       switchLang() {
