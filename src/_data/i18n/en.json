@@ -1,0 +1,67 @@
+{
+  "title": "Teku AI - Advanced AI Solution for Business",
+  "nav": [
+    {
+      "label": "Our work",
+      "url": "#work"
+    },
+    {
+      "label": "Solutions",
+      "url": "#services"
+    },
+    {
+      "label": "How to works",
+      "url": "#how-it-works"
+    },
+    {
+      "label": "FAQ",
+      "url": "#faq"
+    }
+  ],
+  "quote": {
+    "label": "Get a quote",
+    "url": "#quote"
+  },
+  "hero": {
+    "title": "Custom AI Agents",
+    "subtitle": "For Your Business"
+  },
+  "sections": {
+    "projects": "Featured Projects",
+    "solutions": "Our Solutions",
+    "tools": "Tools & Technologies",
+    "process": "Implementation Process",
+    "ready": "Ready to Transform Your Business?",
+    "questions": "Frequently Asked Questions"
+  },
+  "faqs": [
+    {
+      "question": "What kinds of businesses do you work with?",
+      "answer": "We work with businesses of all sizes, from startups to established companies, across several niches. Whether you're in real estate, legal, medical, or another service-based industry, we can tailor AI automations to fit your needs."
+    },
+    {
+      "question": "How long does it take to build an AI automation?",
+      "answer": "The time to build an AI automation depends on the scope and complexity of the project. Simple workflows like automating lead capture or sending notifications can be built and running in as little as a few days to one week. More advanced automations that involve multiple systems, AI agents, or deep CRM integrations usually take 2–6 weeks to design, test, and optimize. We always provide a clear timeline after our initial discovery call so you'll know exactly what to expect and when your automation will be live."
+    },
+    {
+      "question": "How does your pricing work?",
+      "answer": "Pricing depends on the complexity of the automation. Simple workflows are more affordable, while advanced projects with multiple integrations cost more. After understanding your needs, we'll provide a clear quote with no hidden fees."
+    },
+    {
+      "question": "How do I know if AI is a good fit for my business?",
+      "answer": "AI is a great fit if your business relies on repetitive tasks, manual data entry, customer support, or lead management. If you want to save time, reduce errors, and scale without hiring more staff, AI automation can help."
+    },
+    {
+      "question": "Do I need technical knowledge to use the automations?",
+      "answer": "Each AI automation is delivered with full documentation. If you want us to handle maintenance, no technical knowledge is needed. But if you prefer to manage and maintain it yourself, then yes, you'll need some technical knowledge."
+    },
+    {
+      "question": "Can you integrate with the tools I already use?",
+      "answer": "Yes. We integrate AI automations with most popular tools, CRMs, and communication platforms. During our discovery call, we'll confirm compatibility with the systems you already use."
+    },
+    {
+      "question": "Do you offer support after implementation?",
+      "answer": "Yes. We provide ongoing support, monitoring, and optimization services to keep your automations running smoothly. You can choose to handle maintenance yourself with our documentation, or let us take care of everything for you."
+    }
+  ]
+}

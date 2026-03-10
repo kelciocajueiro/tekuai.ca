@@ -1,0 +1,36 @@
+{
+  "name": "tekuai-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development eleventy --serve",
+    "build": "cross-env NODE_ENV=production eleventy",
+    "format": "prettier \"**/*.{js,ts,jsx,tsx,json,md,css,scss,html,njx}\" --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check": "npm run lint && npm run format",
+    "fix": "npm run lint:fix && npm run format"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.27",
+    "cross-env": "^10.1.0",
+    "cssnano": "^7.1.2",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "prettier": "^3.8.1",
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.1"
+  }
+}

@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-main: #0b0f1c;
+  --color-font: #d4d7dd;
+  --color-accent-blue: #2da6e1;
+  --color-accent-cyan: #00ffff;
+  --color-accent-violet: #a020f0;
+  --color-dark-bg: #0a0d18;
+  --color-card-bg: #1a1f2e;
+  --color-border: #2a2f3e;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --background-page: linear-gradient(135deg, #020617 0%, #0a0f1a 25%, #0f172a 50%, #0a0f1a 75%, #020617 100%);
+}

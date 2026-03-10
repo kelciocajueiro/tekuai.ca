@@ -1,0 +1,29 @@
+---
+permalink: /
+layout: null
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      (function () {
+        const supported = ['pt', 'en'];
+
+        const saved = localStorage.getItem('lang');
+
+        if (saved) {
+          location.replace('/' + saved + '/');
+          return;
+        }
+
+        const browser = navigator.language.slice(0, 2);
+
+        const lang = supported.includes(browser) ? browser : 'en';
+
+        location.replace('/' + lang + '/');
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

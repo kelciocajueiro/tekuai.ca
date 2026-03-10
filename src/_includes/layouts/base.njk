@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ lang.locale }}" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ "title" | t }}</title>
+
+    {% for l in languages %}
+      <link rel="alternate" hreflang="{{ l.locale }}" href="/{{ l.code }}/" />
+    {% endfor %}
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="module" src="/assets/js/main.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body class="bg-teku-bg text-teku-text font-body relative min-h-screen">
+    {# O Header gerencia seu próprio posicionamento fixed e z-50 #}
+    {% include "components/header.njk" %}
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 md:px-12">
+      <main>{{ content | safe }}</main>
+    </div>
+
+    {# Opcional: Adicione um elemento de brilho/glow no fundo para o estilo Teku #}
+    <div class="pointer-events-none fixed top-0 left-1/2 -z-10 h-full w-full -translate-x-1/2 opacity-20">
+      <div class="bg-teku-blue absolute top-[-10%] left-[-10%] h-[40%] w-[40%] rounded-full blur-[120px]"></div>
+      <div class="bg-teku-cyan absolute right-[-5%] bottom-[10%] h-[30%] w-[30%] rounded-full blur-[100px]"></div>
+    </div>
+  </body>
+</html>

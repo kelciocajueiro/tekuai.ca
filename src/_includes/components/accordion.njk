@@ -1,0 +1,22 @@
+<div class="accordion mt-8" x-data="{ active: 0 }">
+  {% for item in faqs %}
+    <div class="accordion-item" :class="{ 'active': active === {{ loop.index0 }} }">
+      <button
+        class="accordion-header"
+        @click="active = active === {{ loop.index0 }} ? -1 : {{ loop.index0 }}"
+        :aria-expanded="(active === {{ loop.index0 }}).toString()">
+        <span>{{ item.question }}</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </button>
+
+      <div
+        class="accordion-content"
+        x-ref="content"
+        x-bind:style="active === {{ loop.index0 }} && $refs.content
+        ? `max-height: ${$refs.content.scrollHeight}px`
+        : 'max-height: 0px'">
+        <div class="accordion-inner">{{ item.answer }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

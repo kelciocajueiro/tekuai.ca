@@ -1,0 +1,44 @@
+<div class="floating-lang-switcher" x-data="langSwitcher('{{ lang.code }}', '{{ page.url }}')">
+  <button
+    class="lang-toggle-btn"
+    @click="switchLang()"
+    :title="lang === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês'">
+    <img
+      :src="flag"
+      :key="lang"
+      x-transition:enter="flag-enter"
+      x-transition:enter-start="flag-enter-start"
+      x-transition:enter-end="flag-enter-end"
+      x-transition:leave="flag-leave"
+      x-transition:leave-start="flag-leave-start"
+      x-transition:leave-end="flag-leave-end"
+      class="flag-png" />
+  </button>
+</div>
+
+<script>
+  function langSwitcher(currentLang, currentUrl) {
+    console.log('LLANG' + JSON.stringify(currentLang));
+    return {
+      lang: currentLang,
+
+      get flag() {
+        return `/icons/${this.lang}.png`;
+      },
+
+      switchLang() {
+        const newLang = this.lang === 'en' ? 'pt' : 'en';
+
+        let newUrl = currentUrl;
+
+        if (newUrl.startsWith('/en/')) {
+          newUrl = newUrl.replace('/en/', `/${newLang}/`);
+        } else if (newUrl.startsWith('/pt/')) {
+          newUrl = newUrl.replace('/pt/', `/${newLang}/`);
+        }
+
+        window.location.href = newUrl;
+      },
+    };
+  }
+</script>

@@ -1,0 +1,82 @@
+@import './theme.css';
+
+@layer components {
+  .floating-lang-switcher {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .floating-lang-switcher.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .lang-toggle-btn {
+    background: rgba(11, 15, 28, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .lang-toggle-btn:hover {
+    border-color: rgba(45, 166, 225, 0.5);
+    box-shadow: 0 4px 25px rgba(45, 166, 225, 0.3);
+    transform: scale(1.05);
+  }
+
+  .lang-toggle-btn:active {
+    transform: scale(0.95);
+  }
+
+  .flag-png {
+    width: 28px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .flag-enter {
+    transition: all 0.25s ease;
+  }
+
+  .flag-enter-start {
+    opacity: 0;
+    transform: scale(0.7) rotate(-10deg);
+  }
+
+  .flag-enter-end {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+
+  .flag-leave {
+    transition: all 0.2s ease;
+    position: absolute;
+  }
+
+  .flag-leave-start {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .flag-leave-end {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}

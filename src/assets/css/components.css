@@ -1,0 +1,40 @@
+@import './base.css';
+
+@layer components {
+  .glass-panel {
+    @apply flex items-center justify-between rounded-full border border-white/5 bg-[rgba(11,15,28,0.4)] px-7.5 py-3.75 shadow-[0_4px_30px_rgba(0,0,0,0.3)] backdrop-blur-[15px];
+  }
+
+  .section {
+    @apply py-12;
+  }
+
+  .section-title {
+    @apply mb-16 text-center text-4xl;
+  }
+
+  .btn {
+    @apply font-body inline-block cursor-pointer rounded-lg border-none px-7.5 py-3.75 text-base font-semibold no-underline transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply from-accent-blue to-accent-cyan text-main bg-linear-to-br shadow-[0_4px_15px_rgba(45,166,225,0.3)];
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5 shadow-[0_8px_25px_rgba(45,166,225,0.5)];
+  }
+
+  .btn-secondary {
+    @apply border-accent-blue border-2 border-solid bg-transparent text-white;
+  }
+
+  .btn-secondary:hover {
+    @apply text-accent-blue -translate-y-0.5 border-white bg-white shadow-[0_8px_25px_rgba(255,255,255,0.2)];
+  }
+
+  .divider-fade {
+    @apply h-px w-full opacity-30;
+    background: linear-gradient(90deg, transparent 0%, var(--color-accent-cyan) 50%, transparent 100%);
+  }
+}

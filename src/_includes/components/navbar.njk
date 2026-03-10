@@ -1,0 +1,58 @@
+<nav
+  x-data="{
+    show: true,
+    lastPos: 0,
+    threshold: 10,
+    offset: 80,
+
+    handleScroll() {
+      const currentPos = window.scrollY;
+
+      if (Math.abs(currentPos - this.lastPos) < this.threshold) return;
+
+      if (currentPos <= 0) {
+        this.show = true;
+        this.lastPos = currentPos;
+        return;
+      }
+
+      if (currentPos > this.lastPos && currentPos > this.offset) {
+        this.show = false;
+      } 
+      else if (currentPos < this.lastPos) {
+        this.show = true;
+      }
+
+      this.lastPos = currentPos;
+    }
+  }"
+  x-init="lastPos = window.scrollY"
+  @scroll.window="handleScroll"
+  :class="show ? 'translate-y-0' : '-translate-y-[150%]'"
+  class="glass-panel fixed top-4 left-1/2 z-50 w-[min(1100px,92%)] -translate-x-1/2 transform transition-transform duration-300 ease-out will-change-transform">
+  {% set nav = i18n[lang.code].nav %}
+  {% set quote = i18n[lang.code].quote %}
+
+  <div class="font-heading flex gap-0 text-[1.5rem] font-bold text-white">
+    <span>TEKU</span>
+    <span class="text-accent-cyan">.AI</span>
+  </div>
+
+  <ul class="hidden items-center gap-8 md:flex">
+    {% for item in nav %}
+      <li>
+        <a
+          href="{{ item.url }}"
+          class="hover:text-accent-cyan text-sm font-medium text-white/70 transition-colors duration-200">
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a
+    href="{{ quote.url }}"
+    class="font-body text-main hover:bg-accent-cyan cursor-pointer rounded-full bg-white px-6 py-2.5 text-[0.95rem] font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_4px_15px_rgba(0,255,255,0.3)]">
+    {{ quote.label }}
+  </a>
+</nav>

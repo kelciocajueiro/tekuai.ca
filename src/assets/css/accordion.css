@@ -1,0 +1,55 @@
+@import './theme.css';
+
+@layer components {
+  .accordion {
+    @apply flex max-w-200 flex-col gap-4;
+  }
+
+  .accordion-item {
+    @apply overflow-hidden rounded-xl border transition-all duration-300 ease-in-out;
+    background: var(--color-card-bg);
+    border-color: var(--color-border);
+  }
+
+  .accordion-item:hover {
+    border-color: rgba(45, 166, 225, 0.4);
+  }
+
+  .accordion-item.active {
+    @apply shadow-[0_4px_20px_rgba(45,166,225,0.1)];
+    border-color: var(--color-accent-blue);
+  }
+
+  .accordion-header {
+    @apply flex w-full cursor-pointer items-center justify-between border-none p-6 text-left text-[1.15rem] font-semibold transition-colors duration-300 ease-in-out;
+    background: transparent;
+    font-family: var(--font-heading);
+    color: white;
+  }
+
+  .accordion-item.active .accordion-header {
+    color: var(--color-accent-cyan);
+  }
+
+  .accordion-icon {
+    @apply text-base transition-transform duration-300;
+    color: var(--color-font);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .accordion-item.active .accordion-icon {
+    @apply rotate-180;
+    color: var(--color-accent-cyan);
+  }
+
+  .accordion-content {
+    @apply max-h-0 overflow-hidden transition-[max-height] duration-400;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .accordion-inner {
+    @apply px-6 pb-6 text-[1.05rem] leading-relaxed;
+    color: var(--color-font);
+    font-family: var(--font-body);
+  }
+}

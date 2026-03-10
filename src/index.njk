@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+
+permalink: '/{{ lang.code }}/'
+---
+
+{% include "components/lang-switcher.njk" %}
+{% include "components/hero.njk" %}
+<div class="divider-fade"></div>
+
+<section id="work" class="section">
+  <h2 class="section-title">{{ "sections.projects" | t }}</h2>
+  <div class="mx-auto">{% include "components/videos.njk" %}</div>
+</section>
+
+<div class="divider-fade"></div>
+
+<section id="services" class="section">
+  <h2 class="section-title">{{ "sections.solutions" | t }}</h2>
+
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    {% set icon = "fas fa-robot" %}
+    {% set title = "AI Custom Systems" %}
+    {% set description = "Seamless integration with tools like Make and n8n to eliminate bottlenecks." %}
+    {% include "components/service-card.njk" %}
+
+    {% set icon = "fas fa-phone-volume" %}
+    {% set title = "AI Voice Agents" %}
+    {% set description = "Automated call centers and support lines that sound completely natural." %}
+    {% include "components/service-card.njk" %}
+  </div>
+</section>
+
+<div class="divider-fade"></div>
+
+<section id="faq" class="section">
+  <h2 class="section-title">{{ "sections.questions" | t }}</h2>
+  <div class="mx-auto max-w-3xl">{% include "components/accordion.njk" %}</div>
+</section>
+
+{% include "components/footer.njk" %}

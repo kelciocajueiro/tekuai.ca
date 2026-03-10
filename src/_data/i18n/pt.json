@@ -1,0 +1,67 @@
+{
+  "title": "Teku AI - Solução Avançada de IA para Empresas",
+  "nav": [
+    {
+      "label": "Nosso Trabalho",
+      "url": "#work"
+    },
+    {
+      "label": "Soluções",
+      "url": "#services"
+    },
+    {
+      "label": "Como Funciona",
+      "url": "#how-it-works"
+    },
+    {
+      "label": "Perguntas Frequentes",
+      "url": "#faq"
+    }
+  ],
+  "quote": {
+    "label": "Solicitar Orçamento",
+    "url": "#quote"
+  },
+  "hero": {
+    "title": "Agentes de IA Personalizados",
+    "subtitle": "Para o Seu Negócio"
+  },
+  "sections": {
+    "projects": "Projetos em Destaque",
+    "solutions": "Nossas Soluções",
+    "tools": "Ferramentas e Tecnologias",
+    "process": "Processo de Implementação",
+    "ready": "Pronto para Transformar Seu Negócio?",
+    "questions": "Perguntas Frequentes"
+  },
+  "faqs": [
+    {
+      "question": "Com que tipos de empresas vocês trabalham?",
+      "answer": "Trabalhamos com empresas de todos os tamanhos, desde startups até companhias já estabelecidas, em diversos nichos. Seja no setor imobiliário, jurídico, médico ou em outro segmento baseado em serviços, podemos adaptar automações com IA para atender às suas necessidades."
+    },
+    {
+      "question": "Quanto tempo leva para criar uma automação com IA?",
+      "answer": "O tempo para desenvolver uma automação com IA depende do escopo e da complexidade do projeto. Fluxos simples, como automação de captura de leads ou envio de notificações, podem ser criados e colocados em funcionamento em poucos dias até uma semana. Automações mais avançadas, que envolvem múltiplos sistemas, agentes de IA ou integrações profundas com CRM, normalmente levam de 2 a 6 semanas para serem projetadas, testadas e otimizadas. Sempre fornecemos um cronograma claro após a nossa reunião inicial de descoberta para que você saiba exatamente o que esperar e quando sua automação estará ativa."
+    },
+    {
+      "question": "Como funciona a precificação de vocês?",
+      "answer": "O preço depende da complexidade da automação. Fluxos simples são mais acessíveis, enquanto projetos avançados com múltiplas integrações têm um custo maior. Após entendermos suas necessidades, forneceremos um orçamento claro, sem taxas ocultas."
+    },
+    {
+      "question": "Como saber se IA é adequada para o meu negócio?",
+      "answer": "A IA é uma ótima opção se o seu negócio depende de tarefas repetitivas, entrada manual de dados, suporte ao cliente ou gerenciamento de leads. Se você deseja economizar tempo, reduzir erros e escalar sem contratar mais equipe, a automação com IA pode ajudar."
+    },
+    {
+      "question": "Preciso ter conhecimento técnico para usar as automações?",
+      "answer": "Cada automação de IA é entregue com documentação completa. Se você quiser que cuidemos da manutenção, não será necessário nenhum conhecimento técnico. Porém, se preferir gerenciar e manter tudo por conta própria, será necessário ter algum conhecimento técnico."
+    },
+    {
+      "question": "Vocês podem integrar com as ferramentas que eu já uso?",
+      "answer": "Sim. Integramos automações com IA com a maioria das ferramentas populares, CRMs e plataformas de comunicação. Durante nossa reunião de descoberta, confirmaremos a compatibilidade com os sistemas que você já utiliza."
+    },
+    {
+      "question": "Vocês oferecem suporte após a implementação?",
+      "answer": "Sim. Oferecemos suporte contínuo, monitoramento e serviços de otimização para manter suas automações funcionando perfeitamente. Você pode escolher fazer a manutenção por conta própria com nossa documentação ou deixar que cuidemos de tudo para você."
+    }
+  ]
+}
