@@ -28,6 +28,11 @@ export default function (eleventyConfig) {
     return value || key;
   });
 
+  eleventyConfig.addShortcode('asset', function (path) {
+    const base = process.env.BASE_PATH || '';
+    return `${base}/assets/${path}`;
+  });
+
   const postcssPlugins = [tailwindcss(), ...(isProduction ? [cssnano({ preset: 'default' })] : [])];
 
   const processor = postcss(postcssPlugins);

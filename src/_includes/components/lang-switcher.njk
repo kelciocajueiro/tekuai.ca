@@ -1,4 +1,4 @@
-<div class="floating-lang-switcher" x-data="langSwitcher('{{ lang.code }}', '{{ page.url }}')">
+<div class="floating-lang-switcher" x-data="langSwitcher('{{ lang.code }}', '{{ page.url }}', '{{ site.baseurl }}')">
   <button
     class="lang-toggle-btn"
     @click="switchLang()"
@@ -17,13 +17,16 @@
 </div>
 
 <script>
-  function langSwitcher(currentLang, currentUrl) {
-    console.log('LLANG' + JSON.stringify(currentLang));
+  function langSwitcher(currentLang, currentUrl, baseUrl) {
+    console.log('currentLang ' + currentLang);
+    console.log('currentUrl ' + currentUrl);
+    console.log('baseUrl ' + baseUrl);
+
     return {
       lang: currentLang,
 
       get flag() {
-        return `/icons/${this.lang}.png`;
+        return `${baseUrl}/icons/${this.lang}.png`;
       },
 
       switchLang() {
@@ -37,7 +40,7 @@
           newUrl = newUrl.replace('/pt/', `/${newLang}/`);
         }
 
-        window.location.href = newUrl;
+        window.location.href = `${baseUrl}${newUrl}`;
       },
     };
   }

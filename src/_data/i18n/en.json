@@ -24,7 +24,8 @@
   },
   "hero": {
     "title": "Custom AI Agents",
-    "subtitle": "For Your Business"
+    "subtitle": "For Your Business",
+    "learn": "Learn more"
   },
   "sections": {
     "projects": "Featured Projects",
@@ -34,6 +35,20 @@
     "ready": "Ready to Transform Your Business?",
     "questions": "Frequently Asked Questions"
   },
+  "videos": [
+    {
+      "title": "Recepcionista Inteligente com IA",
+      "description": "Atenda seus clientes automaticamente 24 horas por dia. Este agente de IA recebe chamadas, agenda e cancela consultas e envia confirmações de forma automática. Integrado ao seu calendário e e-mail, ele organiza sua agenda em tempo real, evita conflitos de horários e garante que nenhum cliente fique sem atendimento.",
+      "iframe": "https://player.vimeo.com/video/1116678767?h=e245b99a53&title=0&byline=0&portrait=0",
+      "link": "#"
+    },
+    {
+      "title": "Agente de IA para Ligações Automáticas",
+      "description": "Nunca mais perca uma oportunidade de venda. Este agente de IA liga automaticamente para suas leads 24 horas por dia, realiza uma entrevista inteligente para identificar quem realmente tem potencial de compra e qualifica os contatos para sua equipe. Além disso, ele registra todas as informações e pode gerar propostas personalizadas automaticamente.",
+      "iframe": "https://player.vimeo.com/video/1114996485?h=25fe53326f&title=0&byline=0&portrait=0",
+      "link": "#"
+    }
+  ],
   "faqs": [
     {
       "question": "What kinds of businesses do you work with?",
@@ -63,5 +78,29 @@
       "question": "Do you offer support after implementation?",
       "answer": "Yes. We provide ongoing support, monitoring, and optimization services to keep your automations running smoothly. You can choose to handle maintenance yourself with our documentation, or let us take care of everything for you."
     }
-  ]
+  ],
+  "footer": {
+    "socials": [
+      { "label": "Twitter", "icon": "fab fa-twitter", "url": "#" },
+      { "label": "LinkedIn", "icon": "fab fa-linkedin-in", "url": "#" },
+      { "label": "GitHub", "icon": "fab fa-github", "url": "#" }
+    ],
+    "solutions": [
+      { "label": "AI Custom Systems", "url": "#" },
+      { "label": "AI Voice Agents", "url": "#" },
+      { "label": "Workflow Automation", "url": "#" },
+      { "label": "Consulting", "url": "#" }
+    ],
+    "company": [
+      { "label": "Our Work", "url": "#" },
+      { "label": "About Us", "url": "#" },
+      { "label": "Pricing", "url": "#" },
+      { "label": "Contact", "url": "#" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "url": "#" },
+      { "label": "Terms of Service", "url": "#" },
+      { "label": "Cookie Policy", "url": "#" }
+    ]
+  }
 }
