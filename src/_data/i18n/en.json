@@ -37,18 +37,21 @@
   },
   "videos": [
     {
-      "title": "Recepcionista Inteligente com IA",
-      "description": "Atenda seus clientes automaticamente 24 horas por dia. Este agente de IA recebe chamadas, agenda e cancela consultas e envia confirmações de forma automática. Integrado ao seu calendário e e-mail, ele organiza sua agenda em tempo real, evita conflitos de horários e garante que nenhum cliente fique sem atendimento.",
+      "title": "AI Smart Receptionist",
+      "description": "Serve your customers automatically 24 hours a day. This AI agent receives calls, schedules and cancels appointments, and sends confirmations automatically. Integrated with your calendar and email, it organizes your schedule in real time, prevents time conflicts, and ensures that no customer is left without service.",
       "iframe": "https://player.vimeo.com/video/1116678767?h=e245b99a53&title=0&byline=0&portrait=0",
       "link": "#"
     },
     {
-      "title": "Agente de IA para Ligações Automáticas",
-      "description": "Nunca mais perca uma oportunidade de venda. Este agente de IA liga automaticamente para suas leads 24 horas por dia, realiza uma entrevista inteligente para identificar quem realmente tem potencial de compra e qualifica os contatos para sua equipe. Além disso, ele registra todas as informações e pode gerar propostas personalizadas automaticamente.",
+      "title": "AI Agent for Automatic Phone Calls",
+      "description": "Never miss a sales opportunity again. This AI agent automatically calls your leads 24 hours a day, conducts an intelligent interview to identify who truly has buying potential, and qualifies contacts for your team. In addition, it records all information and can automatically generate personalized proposals.",
       "iframe": "https://player.vimeo.com/video/1114996485?h=25fe53326f&title=0&byline=0&portrait=0",
       "link": "#"
     }
   ],
+  "tools": {
+    "description": "Trabalhamos com ferramentas que você já conhece e ama para desenvolver automações inteligentes que entregam resultados de verdade para o seu negócio."
+  },
   "faqs": [
     {
       "question": "What kinds of businesses do you work with?",
@@ -80,10 +83,10 @@
     }
   ],
   "footer": {
+    "description": "Advanced artificial intelligence agents for businesses and corporations.",
     "socials": [
-      { "label": "Twitter", "icon": "fab fa-twitter", "url": "#" },
-      { "label": "LinkedIn", "icon": "fab fa-linkedin-in", "url": "#" },
-      { "label": "GitHub", "icon": "fab fa-github", "url": "#" }
+      { "label": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/juliosilva.ai/?next=%2F" },
+      { "label": "Youtube", "icon": "fab fa-youtube", "url": "https://www.youtube.com/@juliosilvaai/" }
     ],
     "solutions": [
       { "label": "AI Custom Systems", "url": "#" },

@@ -2,118 +2,43 @@
 
 @layer components {
   .video-card {
-    background: var(--color-card-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    @apply border-border bg-card-bg relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out;
   }
 
   .video-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(45, 166, 225, 0.4);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    @apply -translate-y-1.25 border-[rgba(45,166,225,0.4)] shadow-[0_10px_40px_rgba(0,0,0,0.4)];
   }
 
-  /* Container do Vídeo (Proporção 16:9) */
   .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Mantém a proporção 16:9 */
-    background: #000;
-    overflow: hidden;
+    @apply relative w-full overflow-hidden bg-black pt-[56.25%];
   }
 
-  /* Se usar um iframe ou tag <video> real, eles preencherão este espaço */
   .video-wrapper iframe,
   .video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    object-fit: cover;
+    @apply absolute top-0 left-0 h-full w-full border-0 object-cover;
   }
 
   .video-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(45, 166, 225, 0.1), rgba(160, 32, 240, 0.1));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply absolute top-0 left-0 flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,rgba(45,166,225,0.1),rgba(160,32,240,0.1))];
   }
 
   .play-btn-overlay {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding-left: 4px;
+    @apply flex h-15 w-15 cursor-pointer items-center justify-center rounded-full border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] pl-1 text-[1.2rem] text-white backdrop-blur-sm transition-all duration-300 ease-in-out;
   }
 
   .video-card:hover .play-btn-overlay {
-    background: var(--color-accent-cyan);
-    border-color: transparent;
-    color: #0b0f1c;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    @apply bg-accent-cyan text-main scale-110 border-transparent shadow-[0_0_20px_rgba(0,255,255,0.4)];
   }
 
   .video-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  .video-tags {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    background: rgba(45, 166, 225, 0.1);
-    color: var(--color-accent-cyan);
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    font-family: var(--font-body);
-    border: 1px solid rgba(45, 166, 225, 0.2);
+    @apply flex grow flex-col p-6;
   }
 
   .video-title {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: var(--color-accent-cyan);
-    margin-bottom: 1rem;
-    font-weight: 600;
+    @apply text-accent-cyan mb-4 text-[1.25rem] font-(--font-heading);
   }
 
   .video-desc {
-    font-family: var(--font-body);
-    color: var(--color-font);
-    font-size: 0.95rem;
-    line-height: 1.5;
+    @apply text-font text-[0.95rem] leading-normal font-(--font-body);
   }
 }

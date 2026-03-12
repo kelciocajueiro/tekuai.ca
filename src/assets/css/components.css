@@ -10,7 +10,8 @@
   }
 
   .section-title {
-    @apply mb-16 text-center text-4xl;
+    @apply text-4xl;
+    margin-bottom: 1.5rem;
   }
 
   .btn {

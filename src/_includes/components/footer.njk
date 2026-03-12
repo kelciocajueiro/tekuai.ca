@@ -1,18 +1,20 @@
+{% set footer = i18n[lang.code].footer %}
+
 <footer class="site-footer mt-8">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="text-2xl font-(--font-heading) text-white">
-        {{ site.name | default("TEKU") }}
-        <span class="text-(--accent-cyan)">.AI</span>
+      <div class="font-heading flex gap-0 text-[1.5rem] font-bold text-white">
+        <span>TEKU</span>
+        <span class="text-accent-cyan">.AI</span>
       </div>
 
-      <p>
-        {{ site.description | default("We build tailored AI automations that help your business scale faster and smarter without manual work.") }}
-      </p>
+      <p>{{ "footer.description" | t }}</p>
+
+      <p></p>
 
       <div class="footer-socials">
-        {% for social in socials %}
-          <a href="{{ social.url }}" class="social-icon" aria-label="{{ social.label }}">
+        {% for social in footer.socials %}
+          <a href="{{ "social.url" | t }}" class="social-icon" aria-label="{{ social.label }}">
             <i class="{{ social.icon }}"></i>
           </a>
         {% endfor %}
@@ -53,12 +55,6 @@
   <div class="footer-bottom">
     <div class="copyright">
       &copy; {{ year | default(2026) }} {{ site.name | default("Teku AI") }}. All rights reserved.
-    </div>
-
-    <div class="footer-legal-links">
-      {% for item in footer.legal %}
-        <a href="{{ item.url }}">{{ item.label }}</a>
-      {% endfor %}
     </div>
   </div>
 </footer>

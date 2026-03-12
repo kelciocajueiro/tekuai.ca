@@ -38,6 +38,16 @@ permalink: '/{{ lang.code }}/'
 
 <div class="divider-fade"></div>
 
+<section id="tools" class="section">
+  <h2 class="section-title">{{ "sections.tools" | t }}</h2>
+  <p class="mx-auto max-w-3xl text-lg leading-relaxed font-light text-slate-400 md:text-xl">
+    {{ "tools.description" | t }}
+  </p>
+  <div class="mx-auto">{% include "components/tools.njk" %}</div>
+</section>
+
+<div class="divider-fade"></div>
+
 <section id="faq" class="section">
   <h2 class="section-title">{{ "sections.questions" | t }}</h2>
   <div class="mx-auto max-w-3xl">{% include "components/accordion.njk" %}</div>

@@ -49,6 +49,9 @@
       "link": "#"
     }
   ],
+  "tools": {
+    "description": "We work with tools you already know and love to build intelligent automations that deliver real results for your business."
+  },
   "faqs": [
     {
       "question": "Com que tipos de empresas vocês trabalham?",
@@ -80,10 +83,10 @@
     }
   ],
   "footer": {
+    "description": "Agentes de inteligência artificial avançados para empresas e corporações.",
     "socials": [
-      { "label": "Twitter", "icon": "fab fa-twitter", "url": "#" },
-      { "label": "LinkedIn", "icon": "fab fa-linkedin-in", "url": "#" },
-      { "label": "GitHub", "icon": "fab fa-github", "url": "#" }
+      { "label": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/juliosilva.ai/?next=%2F" },
+      { "label": "Youtube", "icon": "fab fa-youtube", "url": "https://www.youtube.com/@juliosilvaai/" }
     ],
     "solutions": [
       { "label": "AI Custom Systems", "url": "#" },
