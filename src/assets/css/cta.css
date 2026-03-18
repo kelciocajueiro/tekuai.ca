@@ -1,0 +1,46 @@
+@import './theme.css';
+
+@layer components {
+  .cta-section {
+    @apply relative flex justify-center px-8 py-12;
+  }
+
+  .cta-banner {
+    @apply bg-card-bg border-border relative flex w-full max-w-275 items-center justify-between gap-12 rounded-4xl border p-16;
+  }
+
+  .cta-content {
+    @apply z-1 max-w-150;
+  }
+
+  .cta-content h2 {
+    @apply mb-6 leading-[1.1];
+  }
+
+  .cta-content p {
+    @apply m-0 text-[1.2rem] font-(--font-body) text-(--font-color);
+  }
+
+  .cta-actions {
+    @apply z-1 flex min-w-62.5 flex-col items-center gap-4;
+  }
+
+  .btn-cta {
+    @apply w-full px-11.25 py-4.5 text-center text-[1.1rem];
+  }
+
+  .cta-note {
+    @apply text-accent-cyan flex items-center gap-1.5 text-[0.9rem] font-(--font-body) opacity-80;
+  }
+
+  /* Responsividade para Mobile */
+  @media (max-width: 868px) {
+    .cta-banner {
+      @apply flex-col px-8 py-12 text-center;
+    }
+
+    .cta-content {
+      @apply max-w-full;
+    }
+  }
+}

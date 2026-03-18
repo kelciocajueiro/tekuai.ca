@@ -10,8 +10,11 @@
   }
 
   .section-title {
-    @apply text-4xl;
-    margin-bottom: 1.5rem;
+    @apply mb-6 text-center text-4xl;
+  }
+
+  .section-content {
+    @apply mx-auto;
   }
 
   .btn {

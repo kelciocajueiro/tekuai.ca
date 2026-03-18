@@ -1,0 +1,78 @@
+@import './base.css';
+
+@layer components {
+  .service-card {
+    @apply relative flex cursor-pointer flex-col items-center overflow-hidden text-center;
+    @apply rounded-2xl border;
+    @apply px-8 py-12;
+    background: var(--color-card-bg);
+    border-color: var(--color-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glow */
+  .service-card::before {
+    content: '';
+    @apply pointer-events-none absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(45, 166, 225, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-icon-wrapper {
+    @apply relative z-1 flex items-center justify-center;
+    @apply mb-8 rounded-full;
+    @apply h-30 w-30;
+    background: rgba(45, 166, 225, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover .service-icon-wrapper {
+    background: var(--color-accent-blue);
+    box-shadow: 0 0 30px rgba(45, 166, 225, 0.4);
+  }
+
+  .service-icon-wrapper i {
+    @apply text-accent-cyan text-[3rem];
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover .service-icon-wrapper i {
+    @apply text-white;
+    transform: scale(1.1);
+  }
+
+  .service-card h3 {
+    @apply text-accent-cyan z-1 mb-4 text-2xl;
+    font-family: var(--font-heading);
+  }
+
+  .service-card p {
+    @apply z-1 m-0 grow text-base leading-relaxed;
+    color: var(--font-color);
+    font-family: var(--font-body);
+  }
+
+  .card-cta {
+    @apply z-2 mt-10 w-full max-w-50;
+  }
+
+  .service-card:hover .btn-primary {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+}

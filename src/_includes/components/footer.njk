@@ -8,13 +8,13 @@
         <span class="text-accent-cyan">.AI</span>
       </div>
 
-      <p>{{ "footer.description" | t }}</p>
+      <p>{{ footer.description }}</p>
 
       <p></p>
 
       <div class="footer-socials">
         {% for social in footer.socials %}
-          <a href="{{ "social.url" | t }}" class="social-icon" aria-label="{{ social.label }}">
+          <a href="{{ social.url }}" class="social-icon" aria-label="{{ social.label }}">
             <i class="{{ social.icon }}"></i>
           </a>
         {% endfor %}

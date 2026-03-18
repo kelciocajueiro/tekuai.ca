@@ -1,0 +1,23 @@
+{% set cta = i18n[lang.code].cta %}
+
+<section class="cta-section">
+  <div class="cta-banner">
+    <div class="cta-content">
+      <h2>
+        {{ cta.title }}
+        <span class="gradient-text">{{ cta.subtitle }}</span>
+      </h2>
+      <p>{{ cta.description }}</p>
+    </div>
+
+    <div class="cta-actions">
+      <a href="{{ cta.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-cta">
+        {{ cta.button }}
+      </a>
+      <span class="cta-note">
+        <i class="far fa-clock"></i>
+        {{ cta.time }}
+      </span>
+    </div>
+  </div>
+</section>

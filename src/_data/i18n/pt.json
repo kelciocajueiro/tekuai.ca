@@ -49,8 +49,36 @@
       "link": "#"
     }
   ],
+  "solutions": [
+    {
+      "icon": "fas fa-phone",
+      "title": "Chamada de Descoberta (Gratuita)",
+      "description": "Uma sessão rápida de 15 minutos projetada para ajudar você a entender se a IA é a escolha certa para o seu negócio. Muitos empreendedores não têm certeza de como a IA pode ser aplicada em suas operações ou como ela pode realmente impulsionar o crescimento. Nesta chamada, exploraremos onde a IA pode gerar o maior impacto e daremos clareza sobre como ela pode ajudar a escalar sua empresa de forma eficaz.",
+      "cta": "Agendar uma Chamada"
+    },
+    {
+      "icon": "fas fa-microchip",
+      "title": "Auditoria de IA",
+      "description": "Uma análise estratégica dos fluxos de trabalho da sua empresa para descobrir ineficiências e identificar onde a IA pode substituir o trabalho manual. Analisamos seus processos, destacamos oportunidades de automação e entregamos um roteiro claro com as ferramentas de IA certas para reduzir custos, economizar tempo, aumentar a produtividade e desbloquear novas oportunidades de receita.",
+      "cta": "Agendar uma Auditoria"
+    },
+    {
+      "icon": "fas fa-robot",
+      "title": "Sistemas de IA Personalizados",
+      "description": "Projetamos e construímos automações de IA sob medida que ajudam seu negócio a escalar de forma mais rápida e inteligente. Desde agentes de voz de IA que atendem chamadas 24 horas por dia, 7 dias por semana, até sistemas de qualificação de leads e automações de fluxo de trabalho que eliminam tarefas repetitivas, cada solução é construída para acelerar o crescimento, entregar leads qualificados e liberar sua equipe para focar no fechamento de vendas.",
+      "cta": "Solicitar um Orçamento"
+    }
+  ],
   "tools": {
     "description": "We work with tools you already know and love to build intelligent automations that deliver real results for your business."
+  },
+  "cta": {
+    "title": "Pronto para transformar seu",
+    "subtitle": "negócio?",
+    "description": "Vamos discutir como a IA pode revolucionar suas operações e impulsionar o crescimento.",
+    "button": "Solicitar orçamento",
+    "time": "Leva apenas alguns minutos!",
+    "link": "https://tally.so/r/3EOGBA"
   },
   "faqs": [
     {
@@ -100,6 +128,11 @@
       { "label": "Pricing", "url": "#" },
       { "label": "Contact", "url": "#" }
     ],
+    "newsletter": {
+      "title": "Fique Atualizado",
+      "subtitle": "Receba as últimas dicas de automação com IA diretamente no seu e-mail.",
+      "email": "Digite seu e-mail"
+    },
     "legal": [
       { "label": "Privacy Policy", "url": "#" },
       { "label": "Terms of Service", "url": "#" },

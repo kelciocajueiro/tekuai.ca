@@ -37,17 +37,21 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .accordion-item.active .accordion-icon {
-    @apply rotate-180;
-    color: var(--color-accent-cyan);
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
   }
 
-  .accordion-content {
-    @apply max-h-0 overflow-hidden transition-[max-height] duration-400;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .accordion-item.active .accordion-content {
+    grid-template-rows: 1fr;
   }
 
   .accordion-inner {
+    overflow: hidden;
+  }
+
+  .accordion-text {
     @apply px-6 pb-6 text-[1.05rem] leading-relaxed;
     color: var(--color-font);
     font-family: var(--font-body);

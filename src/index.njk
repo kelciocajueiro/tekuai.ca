@@ -22,35 +22,21 @@ permalink: '/{{ lang.code }}/'
 
 <section id="services" class="section">
   <h2 class="section-title">{{ "sections.solutions" | t }}</h2>
-
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-    {% set icon = "fas fa-robot" %}
-    {% set title = "AI Custom Systems" %}
-    {% set description = "Seamless integration with tools like Make and n8n to eliminate bottlenecks." %}
-    {% include "components/service-card.njk" %}
-
-    {% set icon = "fas fa-phone-volume" %}
-    {% set title = "AI Voice Agents" %}
-    {% set description = "Automated call centers and support lines that sound completely natural." %}
-    {% include "components/service-card.njk" %}
-  </div>
+  {% include "components/service-card.njk" %}
 </section>
 
 <div class="divider-fade"></div>
 
 <section id="tools" class="section">
   <h2 class="section-title">{{ "sections.tools" | t }}</h2>
-  <p class="mx-auto max-w-3xl text-lg leading-relaxed font-light text-slate-400 md:text-xl">
-    {{ "tools.description" | t }}
-  </p>
   <div class="mx-auto">{% include "components/tools.njk" %}</div>
 </section>
 
-<div class="divider-fade"></div>
+{% include "components/cta.njk" %}
 
 <section id="faq" class="section">
   <h2 class="section-title">{{ "sections.questions" | t }}</h2>
-  <div class="mx-auto max-w-3xl">{% include "components/accordion.njk" %}</div>
+  <div class="mx-auto mt-16 max-w-3xl">{% include "components/accordion.njk" %}</div>
 </section>
 
 {% include "components/footer.njk" %}
