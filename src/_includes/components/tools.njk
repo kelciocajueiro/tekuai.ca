@@ -1,128 +1,72 @@
+{%
+  set left = [
+    { label: 'Notion', icon: 'notion', extension: 'svg' },
+    { label: 'Custom APIs', icon: 'custom-apis', extension: 'svg' },
+    { label: 'RAG', icon: 'rag', extension: 'svg' },
+    { label: 'Claude', icon: 'claude', extension: 'svg' },
+    { label: 'n8n', icon: 'n8n', extension: 'svg' },
+    { label: 'Make', icon: 'make', extension: 'png' },
+    { label: 'Twilio', icon: 'twilio', extension: 'svg' },
+    { label: 'Airtable', icon: 'airtable', extension: 'svg' },
+    { label: 'Active Campaign', icon: 'active-campaign', extension: 'svg' },
+    { label: 'Eleven Labs', icon: 'elevenlabs', extension: 'svg' }
+  ]
+%}
+
+{%
+  set right = [
+    { label: 'Zapier', icon: 'zapier', extension: 'svg' },
+    { label: 'Go HighLevel', icon: 'go-highlevel', extension: 'png' },
+    { label: 'Slack', icon: 'slack', extension: 'svg' },
+    { label: 'Gemini', icon: 'gemini', extension: 'svg' },
+    { label: 'ChatGPT', icon: 'chatgpt', extension: 'webp' },
+    { label: 'Whatsapp', icon: 'whatsapp', extension: 'svg' },
+    { label: 'Telegram', icon: 'telegram', extension: 'svg' },
+    { label: 'Supabase', icon: 'supabase', extension: 'svg' }
+  ]
+%}
+
 <div class="tools-section">
   <div class="marquee-wrapper">
+    <!-- Left Trach -->
     <div class="marquee-track track-left">
       <div class="marquee-group">
-        <div class="tech-pill">
-          <i class="fas fa-robot"></i>
-          OpenAI
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-network-wired"></i>
-          n8n
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-database"></i>
-          Supabase
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-comment-dots"></i>
-          Twilio
-        </div>
-        <div class="tech-pill">
-          <i class="fab fa-slack"></i>
-          Slack
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-bolt"></i>
-          Make
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-brain"></i>
-          Anthropic Claude
-        </div>
+        {% for item in left %}
+          <div class="tech-box" title="{{ item.label }}">
+            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="{{ item.label }}" loading="lazy" />
+            <span>{{ item.label }}</span>
+          </div>
+        {% endfor %}
       </div>
+
       <div class="marquee-group" aria-hidden="true">
-        <div class="tech-pill">
-          <i class="fas fa-robot"></i>
-          OpenAI
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-network-wired"></i>
-          n8n
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-database"></i>
-          Supabase
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-comment-dots"></i>
-          Twilio
-        </div>
-        <div class="tech-pill">
-          <i class="fab fa-slack"></i>
-          Slack
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-bolt"></i>
-          Make
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-brain"></i>
-          Anthropic Claude
-        </div>
+        {% for item in left %}
+          <div class="tech-box">
+            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
+            <span>{{ item.label }}</span>
+          </div>
+        {% endfor %}
       </div>
     </div>
 
+    <!-- Right Track -->
     <div class="marquee-track track-right">
       <div class="marquee-group">
-        <div class="tech-pill">
-          <i class="fab fa-stripe"></i>
-          Stripe
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-table"></i>
-          Airtable
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-microphone"></i>
-          ElevenLabs
-        </div>
-        <div class="tech-pill">
-          <i class="fab fa-aws"></i>
-          AWS
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-plug"></i>
-          Zapier
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-cogs"></i>
-          Retool
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-comments"></i>
-          ChatGPT
-        </div>
+        {% for item in right %}
+          <div class="tech-box" title="{{ item.label }}">
+            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="{{ item.label }}" loading="lazy" />
+            <span>{{ item.label }}</span>
+          </div>
+        {% endfor %}
       </div>
+
       <div class="marquee-group" aria-hidden="true">
-        <div class="tech-pill">
-          <i class="fab fa-stripe"></i>
-          Stripe
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-table"></i>
-          Airtable
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-microphone"></i>
-          ElevenLabs
-        </div>
-        <div class="tech-pill">
-          <i class="fab fa-aws"></i>
-          AWS
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-plug"></i>
-          Zapier
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-cogs"></i>
-          Retool
-        </div>
-        <div class="tech-pill">
-          <i class="fas fa-comments"></i>
-          ChatGPT
-        </div>
+        {% for item in right %}
+          <div class="tech-box">
+            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
+            <span>{{ item.label }}</span>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
