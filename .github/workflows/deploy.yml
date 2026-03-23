@@ -32,51 +32,11 @@ jobs:
           node-version: 24
           cache: 'npm'
 
-O Gemini disse
-Ótimo! Com o package-lock.json no repositório, o npm ci agora vai funcionar como deveria: ele vai garantir que o ambiente do GitHub Actions seja uma cópia idêntica do seu ambiente local, instalando todas as dependências (incluindo o cssnano) antes do build começar.
-
-Aqui está a versão final e otimizada do seu arquivo .yml. Ela já está preparada para o padrão de 2026, usando Node 24 e silenciando os avisos de depreciação.
-
-YAML
-name: Deploy Eleventy to GitHub Pages
-
-on:
-  push:
-    branches: ['main']
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      NODE_ENV: production
-      BASE_PATH: /tekuai.ca/
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: 'npm'
-
       - name: Install dependencies
         run: npm ci
 
       - name: Build Eleventy
-        run: npx @11ty/eleventy --pathprefix=${{ env.BASE_PATH }}
+        run: npx @11ty/eleventy --pathPrefix=${{ env.BASE_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
