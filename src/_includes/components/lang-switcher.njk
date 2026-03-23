@@ -27,25 +27,29 @@
 
 <script>
   function langSwitcher(currentLang, currentUrl, baseUrl) {
+    const normalizedBase = baseUrl.replace(/\/$/, '');
+
     return {
       lang: currentLang,
 
       get flag() {
-        return `${baseUrl}/assets/icons/flags/${this.lang}.png`;
+        return `${normalizedBase}/assets/icons/flags/${this.lang}.png`;
       },
 
       switchLang() {
         const newLang = this.lang === 'en' ? 'pt' : 'en';
 
-        let newUrl = currentUrl;
+        let newPath = currentUrl;
 
-        if (newUrl.startsWith('/en/')) {
-          newUrl = newUrl.replace('/en/', `/${newLang}/`);
-        } else if (newUrl.startsWith('/pt/')) {
-          newUrl = newUrl.replace('/pt/', `/${newLang}/`);
+        if (newPath.startsWith('/en/')) {
+          newPath = newPath.replace('/en/', `/${newLang}/`);
+        } else if (newPath.startsWith('/pt/')) {
+          newPath = newPath.replace('/pt/', `/${newLang}/`);
+        } else if (newPath === '/en' || newPath === '/pt') {
+          newPath = `/${newLang}/`;
         }
 
-        window.location.href = `${baseUrl}${newUrl}`;
+        window.location.href = `${normalizedBase}${newPath}`;
       },
     };
   }

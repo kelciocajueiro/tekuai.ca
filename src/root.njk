@@ -10,18 +10,21 @@ layout: null
       (function () {
         const supported = ['pt', 'en'];
 
+        const baseUrl = "{{ '/' | url }}";
+
+        const normalizedBase = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+
         const saved = localStorage.getItem('lang');
 
-        if (saved) {
-          location.replace('/' + saved + '/');
+        if (saved && supported.includes(saved)) {
+          location.replace(normalizedBase + saved + '/');
           return;
         }
 
         const browser = navigator.language.slice(0, 2);
-
         const lang = supported.includes(browser) ? browser : 'en';
 
-        location.replace('/' + lang + '/');
+        location.replace(normalizedBase + lang + '/');
       })();
     </script>
   </head>
