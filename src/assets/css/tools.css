@@ -2,30 +2,18 @@
 
 @layer components {
   .tools-section {
-    padding: 2rem 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
-    width: 100%;
+    @apply relative flex w-full flex-col gap-6 overflow-hidden pt-8;
   }
 
   .marquee-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 5px 5px;
+    @apply flex w-full flex-col gap-6 px-1.25 py-1.25;
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    width: 100%;
   }
 
   /* Track otimizado para animação */
   .marquee-track {
-    display: flex;
-    gap: 1.5rem;
-    width: fit-content;
+    @apply flex w-fit gap-6;
   }
 
   /* Pausa no hover */
@@ -35,11 +23,7 @@
 
   /* Grupo interno (sem min-width bugado) */
   .marquee-group {
-    display: flex;
-    flex-shrink: 0;
-    min-width: 70%;
-    justify-content: space-around;
-    padding: 10px 0;
+    @apply flex min-w-[70%] shrink-0 justify-around py-2.5;
   }
 
   .track-left {
@@ -73,44 +57,26 @@
   /* ========================= */
 
   .tech-box {
-    width: 120px;
-    height: 120px;
+    @apply relative flex h-30 w-30 shrink-0 flex-col items-center justify-center gap-2 rounded-[20px] border text-center transition-all duration-300 ease-out;
     background: rgba(26, 31, 46, 0.4);
-    border: 1px solid var(--color-border, #2a2f3e);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: var(--color-border, #2a2f3e);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    position: relative;
-    flex-shrink: 0;
     cursor: default;
-    text-align: center;
   }
 
   /* Ícone */
   .tech-box img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
+    @apply h-10.5 w-10.5 object-contain transition-all duration-300 ease-out;
     filter: grayscale(0.8) opacity(0.7);
-    transition: all 0.4s ease;
   }
 
   /* Label */
   .tech-box span {
+    @apply text-[0.8rem] font-medium tracking-[0.5px] uppercase transition-all duration-300 ease-out;
     font-family: var(--font-body, 'Inter', sans-serif);
-    font-size: 0.8rem;
-    font-weight: 500;
     color: var(--font-color, #d4d7dd);
     opacity: 0.6;
-    transition: all 0.4s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
   }
 
   /* Hover efeito */
@@ -127,7 +93,6 @@
   }
 
   .tech-box:hover span {
-    color: white;
-    opacity: 1;
+    @apply text-white opacity-100;
   }
 }

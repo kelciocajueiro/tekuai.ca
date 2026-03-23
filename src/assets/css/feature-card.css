@@ -1,0 +1,46 @@
+@import './base.css';
+
+@layer components {
+  .feature-item {
+    @apply relative flex items-start gap-[1.2rem] overflow-hidden rounded-xl border p-8 transition-all duration-300 ease-out;
+    background: var(--color-card-bg);
+    border-color: var(--color-border);
+  }
+
+  /* Brilho sutil no fundo do card ao passar o mouse */
+  .feature-item::before {
+    content: '';
+    @apply pointer-events-none absolute top-0 left-0 h-full w-full opacity-0 transition-opacity duration-300;
+    background: radial-gradient(
+      800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(45, 166, 225, 0.06),
+      transparent 40%
+    );
+  }
+
+  .feature-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .feature-item:hover::before {
+    opacity: 1;
+  }
+
+  .feature-item h4 {
+    font-size: 1.4rem;
+  }
+
+  .feature-item p {
+    margin-top: 0.5rem;
+    line-height: 1.3rem;
+  }
+
+  .feature-icon {
+    font-size: 1.8rem;
+    color: var(--color-accent-cyan);
+    min-width: 40px;
+    margin-top: 0.2rem;
+  }
+}

@@ -77,6 +77,32 @@
     "title": "Automação Inteligente. Resultados Reais.",
     "description": "Trabalhamos com ferramentas que você já conhece e ama para desenvolver automações inteligentes que entregam resultados de verdade para o seu negócio."
   },
+  "process": [
+    {
+      "order": "01",
+      "icon": "fa-search",
+      "title": "Descoberta & Análise",
+      "description": "Analisamos seus processos atuais, identificamos oportunidades de automação e projetamos a solução ideal."
+    },
+    {
+      "order": "02",
+      "icon": "fa-tools",
+      "title": "Desenvolvimento & Testes",
+      "description": "Nossa equipe desenvolve e testa rigorosamente sua solução de IA personalizada para garantir um desempenho impecável."
+    },
+    {
+      "order": "03",
+      "icon": "fa-rocket",
+      "title": "Implantação & Treinamento",
+      "description": "Implementamos sua solução, fornecemos treinamento completo e garantimos uma integração suave."
+    },
+    {
+      "order": "04",
+      "icon": "fa-shield-alt",
+      "title": "Suporte Contínuo",
+      "description": "Monitoramento contínuo, otimização e suporte para garantir que sua solução de IA evolua com seu negócio."
+    }
+  ],
   "cta": {
     "title": "Pronto para transformar seu",
     "subtitle": "negócio?",

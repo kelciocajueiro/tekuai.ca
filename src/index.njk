@@ -17,9 +17,7 @@ permalink: '/{{ lang.code }}/'
   <span class="divider-badge">{{ sections.projects }}</span>
 </div>
 
-<section id="work" class="section">
-  <div class="mx-auto">{% include "components/videos.njk" %}</div>
-</section>
+{% include "components/videos.njk" %}
 
 <div class="divider-badge-wrapper">
   <span class="divider-badge">{{ sections.solutions }}</span>
@@ -28,9 +26,14 @@ permalink: '/{{ lang.code }}/'
 {% include "components/service-card.njk" %}
 
 <div class="divider-badge-wrapper">
-  <span class="divider-badge">{{ sections.tools }}</span>
+  <span class="divider-badge">{{ sections.process }}</span>
 </div>
 
+{% include "components/how-works.njk" %}
+
+<div class="divider-badge-wrapper">
+  <span class="divider-badge">{{ sections.tools }}</span>
+</div>
 {% include "components/tools.njk" %}
 {% include "components/cta.njk" %}
 

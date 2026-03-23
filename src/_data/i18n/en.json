@@ -77,6 +77,32 @@
     "title": "Smart Automation. Real Results.",
     "description": "We work with tools you already know and love to build intelligent automations that deliver real results for your business."
   },
+  "process": [
+    {
+      "order": "01",
+      "icon": "fa-search",
+      "title": "Discovery & Analysis",
+      "description": "We analyze your current processes, identify automation opportunities, and design the optimal solution."
+    },
+    {
+      "order": "02",
+      "icon": "fa-tools",
+      "title": "Development & Testing",
+      "description": "Our team builds and rigorously tests your custom AI solution to ensure flawless performance."
+    },
+    {
+      "order": "03",
+      "icon": "fa-rocket",
+      "title": "Deployment & Training",
+      "description": "We implement your solution, provide comprehensive training, and ensure smooth integration."
+    },
+    {
+      "order": "04",
+      "icon": "fa-shield-alt",
+      "title": "Ongoing Support",
+      "description": "Continuous monitoring, optimization, and support to ensure your AI solution evolves with your business."
+    }
+  ],
   "cta": {
     "title": "Ready to Transform Your",
     "subtitle": "Business?",

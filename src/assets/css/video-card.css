@@ -10,7 +10,7 @@
   }
 
   .video-card:hover {
-    @apply -translate-y-1.25 border-[rgba(45,166,225,0.4)] shadow-[0_10px_40px_rgba(0,0,0,0.4)];
+    @apply -translate-y-1.25 border-[rgba(45,166,225,0.5)] shadow-[0_10px_40px_rgba(0,0,0,0.4)];
   }
 
   .video-wrapper {

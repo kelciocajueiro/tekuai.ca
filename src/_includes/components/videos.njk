@@ -1,31 +1,35 @@
 {% set videos = i18n[lang.code].videos %}
 
-<div class="video-container">
-  {% for video in videos %}
-    <div class="video-card">
-      <div class="video-wrapper">
-        {% if video.iframe %}
-          <iframe
-            src="{{ video.iframe }}"
-            title="{{ video.title }}"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            style="width:100%; height:100%; border-radius:12px;"></iframe>
-        {% else %}
-          <div class="video-placeholder">
-            <div class="play-btn-overlay">
-              <i class="fas fa-play"></i>
-            </div>
+<section id="work" class="section">
+  <div class="mx-auto">
+    <div class="video-container">
+      {% for video in videos %}
+        <div class="video-card">
+          <div class="video-wrapper">
+            {% if video.iframe %}
+              <iframe
+                src="{{ video.iframe }}"
+                title="{{ video.title }}"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+                style="width:100%; height:100%; border-radius:12px;"></iframe>
+            {% else %}
+              <div class="video-placeholder">
+                <div class="play-btn-overlay">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+            {% endif %}
           </div>
-        {% endif %}
-      </div>
 
-      <div class="video-content">
-        <h4 class="video-title">{{ video.title }}</h4>
-        <p class="video-desc">{{ video.description }}</p>
-      </div>
+          <div class="video-content">
+            <h4 class="video-title">{{ video.title }}</h4>
+            <p class="video-desc">{{ video.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  </div>
+</section>

@@ -13,14 +13,8 @@
   /* Glow */
   .service-card::before {
     content: '';
-    @apply pointer-events-none absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    @apply pointer-events-none absolute -top-1/2 -left-1/2 h-[200%] w-[200%] opacity-0 transition-opacity duration-300 ease-out;
     background: radial-gradient(circle at center, rgba(45, 166, 225, 0.05) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
   }
 
   .service-card:hover {
