@@ -1,6 +1,10 @@
 @import './theme.css';
 
 @layer components {
+  .video-container {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-8;
+  }
+
   .video-card {
     @apply border-border bg-card-bg relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out;
   }
@@ -39,6 +43,6 @@
   }
 
   .video-desc {
-    @apply text-font text-[0.95rem] leading-normal font-(--font-body);
+    @apply text-font leading-normal font-(--font-body);
   }
 }

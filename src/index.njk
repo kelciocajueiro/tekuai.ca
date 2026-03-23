@@ -9,34 +9,34 @@ pagination:
 permalink: '/{{ lang.code }}/'
 ---
 
+{% set sections = i18n[lang.code].sections %}
 {% include "components/lang-switcher.njk" %}
 {% include "components/hero.njk" %}
-<div class="divider-fade"></div>
+
+<div class="divider-badge-wrapper">
+  <span class="divider-badge">{{ sections.projects }}</span>
+</div>
 
 <section id="work" class="section">
-  <h2 class="section-title">{{ "sections.projects" | t }}</h2>
   <div class="mx-auto">{% include "components/videos.njk" %}</div>
 </section>
 
-<div class="divider-fade"></div>
+<div class="divider-badge-wrapper">
+  <span class="divider-badge">{{ sections.solutions }}</span>
+</div>
 
-<section id="services" class="section">
-  <h2 class="section-title">{{ "sections.solutions" | t }}</h2>
-  {% include "components/service-card.njk" %}
-</section>
+{% include "components/service-card.njk" %}
 
-<div class="divider-fade"></div>
+<div class="divider-badge-wrapper">
+  <span class="divider-badge">{{ sections.tools }}</span>
+</div>
 
-<section id="tools" class="section">
-  <h2 class="section-title">{{ "sections.tools" | t }}</h2>
-  <div class="mx-auto">{% include "components/tools.njk" %}</div>
-</section>
-
+{% include "components/tools.njk" %}
 {% include "components/cta.njk" %}
 
 <section id="faq" class="section">
   <h2 class="section-title">{{ "sections.questions" | t }}</h2>
-  <div class="mx-auto mt-16 max-w-3xl">{% include "components/accordion.njk" %}</div>
+  {% include "components/accordion.njk" %}
 </section>
 
 {% include "components/footer.njk" %}

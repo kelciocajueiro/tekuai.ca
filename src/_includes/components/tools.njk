@@ -8,7 +8,7 @@
     { label: 'Make', icon: 'make', extension: 'png' },
     { label: 'Twilio', icon: 'twilio', extension: 'svg' },
     { label: 'Airtable', icon: 'airtable', extension: 'svg' },
-    { label: 'Active Campaign', icon: 'active-campaign', extension: 'svg' },
+    { label: 'E-mail Campaign', icon: 'active-campaign', extension: 'svg' },
     { label: 'Eleven Labs', icon: 'elevenlabs', extension: 'svg' }
   ]
 %}
@@ -16,7 +16,7 @@
 {%
   set right = [
     { label: 'Zapier', icon: 'zapier', extension: 'svg' },
-    { label: 'Go HighLevel', icon: 'go-highlevel', extension: 'png' },
+    { label: 'Go HighLevel', icon: 'gohighlevel', extension: 'png' },
     { label: 'Slack', icon: 'slack', extension: 'svg' },
     { label: 'Gemini', icon: 'gemini', extension: 'svg' },
     { label: 'ChatGPT', icon: 'chatgpt', extension: 'webp' },
@@ -26,48 +26,63 @@
   ]
 %}
 
-<div class="tools-section">
-  <div class="marquee-wrapper">
-    <!-- Left Trach -->
-    <div class="marquee-track track-left">
-      <div class="marquee-group">
-        {% for item in left %}
-          <div class="tech-box" title="{{ item.label }}">
-            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="{{ item.label }}" loading="lazy" />
-            <span>{{ item.label }}</span>
-          </div>
-        {% endfor %}
+{% set tools = i18n[lang.code].tools %}
+
+<section id="tools" class="section">
+  <div class="content">
+    <h3>{{ tools.title }}</h3>
+    <p class="font-desc">{{ tools.description }}</p>
+  </div>
+
+  <div class="tools-section">
+    <div class="marquee-wrapper">
+      <!-- Left Track -->
+      <div class="marquee-track track-left">
+        <div class="marquee-group">
+          {% for item in left %}
+            <div class="tech-box" title="{{ item.label }}">
+              <img
+                src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
+                alt="{{ item.label }}"
+                loading="lazy" />
+              <span>{{ item.label }}</span>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="marquee-group" aria-hidden="true">
+          {% for item in left %}
+            <div class="tech-box">
+              <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
+              <span>{{ item.label }}</span>
+            </div>
+          {% endfor %}
+        </div>
       </div>
 
-      <div class="marquee-group" aria-hidden="true">
-        {% for item in left %}
-          <div class="tech-box">
-            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
-            <span>{{ item.label }}</span>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
+      <!-- Right Track -->
+      <div class="marquee-track track-right">
+        <div class="marquee-group">
+          {% for item in right %}
+            <div class="tech-box" title="{{ item.label }}">
+              <img
+                src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
+                alt="{{ item.label }}"
+                loading="lazy" />
+              <span>{{ item.label }}</span>
+            </div>
+          {% endfor %}
+        </div>
 
-    <!-- Right Track -->
-    <div class="marquee-track track-right">
-      <div class="marquee-group">
-        {% for item in right %}
-          <div class="tech-box" title="{{ item.label }}">
-            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="{{ item.label }}" loading="lazy" />
-            <span>{{ item.label }}</span>
-          </div>
-        {% endfor %}
-      </div>
-
-      <div class="marquee-group" aria-hidden="true">
-        {% for item in right %}
-          <div class="tech-box">
-            <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
-            <span>{{ item.label }}</span>
-          </div>
-        {% endfor %}
+        <div class="marquee-group" aria-hidden="true">
+          {% for item in right %}
+            <div class="tech-box">
+              <img src="/assets/icons/tools/{{ item.icon }}.{{ item.extension }}" alt="" />
+              <span>{{ item.label }}</span>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,17 +1,19 @@
 {% set solutions = i18n[lang.code].solutions %}
 
-<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-  {% for solution in solutions %}
-    <div class="service-card">
-      <div class="service-icon-wrapper">
-        <i class="{{ solution.icon }}"></i>
+<section id="services" class="section">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+    {% for solution in solutions %}
+      <div class="service-card">
+        <div class="service-icon-wrapper">
+          <i class="{{ solution.icon }}"></i>
+        </div>
+
+        <h3>{{ solution.title }}</h3>
+
+        <p>{{ solution.description }}</p>
+
+        <a href="{{ solution.link | default('#') }}" class="btn btn-primary card-cta">{{ solution.cta }}</a>
       </div>
-
-      <h3>{{ solution.title }}</h3>
-
-      <p>{{ solution.description }}</p>
-
-      <a href="{{ solution.link | default('#') }}" class="btn btn-primary card-cta">{{ solution.cta }}</a>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+</section>

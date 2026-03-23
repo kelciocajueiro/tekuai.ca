@@ -2,7 +2,8 @@
 
 @layer components {
   .site-footer {
-    @apply bg-dark-bg border-border relative mt-16 overflow-hidden rounded-t-3xl border-t px-8 pt-16 pb-8;
+    @apply bg-dark-bg border-border relative overflow-hidden rounded-t-3xl border-t px-8 pt-16 pb-8;
+    margin-top: 6rem;
   }
 
   .site-footer::before {

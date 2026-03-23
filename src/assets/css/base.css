@@ -40,6 +40,11 @@
     padding: 0;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body::before {
     content: '';
     @apply pointer-events-none fixed inset-0 -z-10;
@@ -66,31 +71,31 @@
 
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    @apply mb-4;
   }
 
   h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-    @apply mb-4;
   }
 
   h3 {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    @apply mb-2;
   }
 
   h4 {
-    @apply mb-[0.2rem] text-[1.25rem] font-semibold;
+    @apply text-[1.25rem] font-semibold;
   }
 
   p {
-    @apply font-body text-font mb-4;
-    font-size: 1.1rem;
+    @apply font-body text-font;
   }
 }
 
 @layer utilities {
   .gradient-text {
     @apply from-accent-blue to-accent-cyan inline-block bg-linear-to-br bg-clip-text text-transparent;
+  }
+
+  .font-desc {
+    font-size: 1.2rem;
   }
 }

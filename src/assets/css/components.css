@@ -5,16 +5,36 @@
     @apply flex items-center justify-between rounded-full border border-white/5 bg-[rgba(11,15,28,0.4)] px-7.5 py-3.75 shadow-[0_4px_30px_rgba(0,0,0,0.3)] backdrop-blur-[15px];
   }
 
+  .ds-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
   .section {
-    @apply py-12;
+    @apply relative z-2 flex flex-col items-center;
+    margin: 3rem 0;
   }
 
   .section-title {
     @apply mb-6 text-center text-4xl;
+    color: var(--color-slate-300);
   }
 
   .section-content {
     @apply mx-auto;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 0 20px;
+    max-width: 800px;
   }
 
   .btn {
@@ -40,5 +60,24 @@
   .divider-fade {
     @apply h-px w-full opacity-30;
     background: linear-gradient(90deg, transparent 0%, var(--color-accent-cyan) 50%, transparent 100%);
+  }
+
+  .divider-badge-wrapper {
+    @apply relative my-4 flex w-full items-center justify-center;
+  }
+
+  .divider-badge-wrapper::before {
+    content: '';
+    @apply absolute top-1/2 left-0 z-1 h-px w-full;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .divider-badge {
+    @apply z-2 rounded-full px-4 py-1 text-[0.7rem] font-semibold tracking-[1px] uppercase;
+
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent-cyan);
+    font-family: var(--font-body);
   }
 }

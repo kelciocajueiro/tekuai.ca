@@ -25,12 +25,13 @@
   "hero": {
     "title": "Custom AI Agents",
     "subtitle": "For Your Business",
+    "description": "We design and build tailored AI automations that help your business scale faster and smarter without manual work.",
     "learn": "Learn more"
   },
   "sections": {
     "projects": "Featured Projects",
     "solutions": "Our Solutions",
-    "tools": "Tools & Technologies",
+    "tools": "Tech Stack",
     "process": "Implementation Process",
     "ready": "Ready to Transform Your Business?",
     "questions": "Frequently Asked Questions"
@@ -54,23 +55,27 @@
       "icon": "fas fa-phone",
       "title": "Discovery Call (Free)",
       "description": "A quick 15-minute session designed to help you understand if AI is the right fit for your business. Many entrepreneurs aren't sure how AI can be applied to their operations or how it can truly drive growth. In this call, we'll explore where AI could create the most impact and give you clarity on how it can help scale your business effectively.",
-      "cta": "Book a Call"
+      "cta": "Book a Call",
+      "link": "https://calendly.com/comercialtekuai/discovery-call"
     },
     {
       "icon": "fas fa-microchip",
       "title": "AI Audit",
       "description": "A strategic review of your company's workflows to uncover inefficiencies and identify where AI can replace manual work. We analyze your processes, highlight automation opportunities, and deliver a clear roadmap with the right AI tools to cut costs, save time, boost productivity, and unlock new revenue opportunities.",
-      "cta": "Book an Audit"
+      "cta": "Book an Audit",
+      "link": "#cta"
     },
     {
       "icon": "fas fa-robot",
       "title": "AI Custom Systems",
       "description": "We design and build tailored AI automations that help your business scale faster and smarter. From AI voice agents that handle calls 24/7, to lead qualification systems and workflow automations that cut repetitive tasks, every solution is built to accelerate growth, deliver qualified leads, and free your team to focus on closing sales.",
-      "cta": "Get a Quote"
+      "cta": "Get a Quote",
+      "link": "https://tally.so/r/nPqNvx"
     }
   ],
   "tools": {
-    "description": "Trabalhamos com ferramentas que você já conhece e ama para desenvolver automações inteligentes que entregam resultados de verdade para o seu negócio."
+    "title": "Smart Automation. Real Results.",
+    "description": "We work with tools you already know and love to build intelligent automations that deliver real results for your business."
   },
   "cta": {
     "title": "Ready to Transform Your",
@@ -112,6 +117,7 @@
   ],
   "footer": {
     "description": "Advanced artificial intelligence agents for businesses and corporations.",
+    "rights": "All rights reserved.",
     "socials": [
       { "label": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/juliosilva.ai/?next=%2F" },
       { "label": "Youtube", "icon": "fab fa-youtube", "url": "https://www.youtube.com/@juliosilvaai/" }

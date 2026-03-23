@@ -32,6 +32,7 @@
   class="glass-panel fixed top-4 left-1/2 z-50 w-[min(1100px,92%)] -translate-x-1/2 transform transition-transform duration-300 ease-out will-change-transform">
   {% set nav = i18n[lang.code].nav %}
   {% set quote = i18n[lang.code].quote %}
+  {% set cta = i18n[lang.code].cta %}
 
   <div class="font-heading flex gap-0 text-[1.5rem] font-bold text-white">
     <span>TEKU</span>
@@ -51,7 +52,9 @@
   </ul>
 
   <a
-    href="{{ quote.url }}"
+    href="{{ cta.link }}"
+    target="_blank"
+    rel="noopener noreferrer"
     class="font-body text-main hover:bg-accent-cyan cursor-pointer rounded-full bg-white px-6 py-2.5 text-[0.95rem] font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_4px_15px_rgba(0,255,255,0.3)]">
     {{ quote.label }}
   </a>

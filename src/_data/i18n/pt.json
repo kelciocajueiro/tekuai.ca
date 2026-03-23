@@ -25,12 +25,13 @@
   "hero": {
     "title": "Agentes de IA Personalizados",
     "subtitle": "Para o Seu Negócio",
+    "description": "Criamos e desenvolvemos automações de IA personalizadas que ajudam sua empresa a crescer de forma mais rápida e inteligente, sem trabalho manual.",
     "learn": "Saiba mais"
   },
   "sections": {
     "projects": "Projetos em Destaque",
     "solutions": "Nossas Soluções",
-    "tools": "Ferramentas e Tecnologias",
+    "tools": "Tecnologias",
     "process": "Processo de Implementação",
     "ready": "Pronto para Transformar Seu Negócio?",
     "questions": "Perguntas Frequentes"
@@ -39,13 +40,13 @@
     {
       "title": "Recepcionista Inteligente com IA",
       "description": "Atenda seus clientes automaticamente 24 horas por dia. Este agente de IA recebe chamadas, agenda e cancela consultas e envia confirmações de forma automática. Integrado ao seu calendário e e-mail, ele organiza sua agenda em tempo real, evita conflitos de horários e garante que nenhum cliente fique sem atendimento.",
-      "iframe": "https://player.vimeo.com/video/1116678767?h=e245b99a53&title=0&byline=0&portrait=0",
+      "iframe": "https://player.vimeo.com/video/1117997742?h=a9aa754775&title=0&byline=0&portrait=0",
       "link": "#"
     },
     {
       "title": "Agente de IA para Ligações Automáticas",
       "description": "Nunca mais perca uma oportunidade de venda. Este agente de IA liga automaticamente para suas leads 24 horas por dia, realiza uma entrevista inteligente para identificar quem realmente tem potencial de compra e qualifica os contatos para sua equipe. Além disso, ele registra todas as informações e pode gerar propostas personalizadas automaticamente.",
-      "iframe": "https://player.vimeo.com/video/1114996485?h=25fe53326f&title=0&byline=0&portrait=0",
+      "iframe": "https://player.vimeo.com/video/1115065309?h=cf4d7c9968&title=0&byline=0&portrait=0",
       "link": "#"
     }
   ],
@@ -54,23 +55,27 @@
       "icon": "fas fa-phone",
       "title": "Chamada de Descoberta (Gratuita)",
       "description": "Uma sessão rápida de 15 minutos projetada para ajudar você a entender se a IA é a escolha certa para o seu negócio. Muitos empreendedores não têm certeza de como a IA pode ser aplicada em suas operações ou como ela pode realmente impulsionar o crescimento. Nesta chamada, exploraremos onde a IA pode gerar o maior impacto e daremos clareza sobre como ela pode ajudar a escalar sua empresa de forma eficaz.",
-      "cta": "Agendar uma Chamada"
+      "cta": "Agendar uma Chamada",
+      "link": "https://calendly.com/comercialtekuai/discovery-call"
     },
     {
       "icon": "fas fa-microchip",
       "title": "Auditoria de IA",
       "description": "Uma análise estratégica dos fluxos de trabalho da sua empresa para descobrir ineficiências e identificar onde a IA pode substituir o trabalho manual. Analisamos seus processos, destacamos oportunidades de automação e entregamos um roteiro claro com as ferramentas de IA certas para reduzir custos, economizar tempo, aumentar a produtividade e desbloquear novas oportunidades de receita.",
-      "cta": "Agendar uma Auditoria"
+      "cta": "Agendar uma Auditoria",
+      "link": "#cta"
     },
     {
       "icon": "fas fa-robot",
       "title": "Sistemas de IA Personalizados",
       "description": "Projetamos e construímos automações de IA sob medida que ajudam seu negócio a escalar de forma mais rápida e inteligente. Desde agentes de voz de IA que atendem chamadas 24 horas por dia, 7 dias por semana, até sistemas de qualificação de leads e automações de fluxo de trabalho que eliminam tarefas repetitivas, cada solução é construída para acelerar o crescimento, entregar leads qualificados e liberar sua equipe para focar no fechamento de vendas.",
-      "cta": "Solicitar um Orçamento"
+      "cta": "Solicitar um Orçamento",
+      "link": "https://tally.so/r/3EOGBA"
     }
   ],
   "tools": {
-    "description": "We work with tools you already know and love to build intelligent automations that deliver real results for your business."
+    "title": "Automação Inteligente. Resultados Reais.",
+    "description": "Trabalhamos com ferramentas que você já conhece e ama para desenvolver automações inteligentes que entregam resultados de verdade para o seu negócio."
   },
   "cta": {
     "title": "Pronto para transformar seu",
@@ -112,6 +117,7 @@
   ],
   "footer": {
     "description": "Agentes de inteligência artificial avançados para empresas e corporações.",
+    "rights": "Todos os direitos reservados.",
     "socials": [
       { "label": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/juliosilva.ai/?next=%2F" },
       { "label": "Youtube", "icon": "fab fa-youtube", "url": "https://www.youtube.com/@juliosilvaai/" }

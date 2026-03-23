@@ -1,20 +1,23 @@
-<div class="accordion" x-data="{ active: 0 }">
-  {% set faqs = i18n[lang.code].faqs %}
-  {% for item in faqs %}
-    <div class="accordion-item" :class="{ 'active': active === {{ loop.index0 }} }">
-      <button
-        class="accordion-header"
-        @click="active = active === {{ loop.index0 }} ? -1 : {{ loop.index0 }}"
-        :aria-expanded="(active === {{ loop.index0 }}).toString()">
-        <span>{{ item.question }}</span>
-        <i class="fas fa-chevron-down accordion-icon"></i>
-      </button>
+{% set faqs = i18n[lang.code].faqs %}
 
-      <div class="accordion-content">
-        <div class="accordion-inner">
-          <div class="accordion-text">{{ item.answer }}</div>
+<div class="mx-auto mt-12 max-w-3xl">
+  <div class="accordion" x-data="{ active: 0 }">
+    {% for item in faqs %}
+      <div class="accordion-item" :class="{ 'active': active === {{ loop.index0 }} }">
+        <button
+          class="accordion-header"
+          @click="active = active === {{ loop.index0 }} ? -1 : {{ loop.index0 }}"
+          :aria-expanded="(active === {{ loop.index0 }}).toString()">
+          <span>{{ item.question }}</span>
+          <i class="fas fa-chevron-down accordion-icon"></i>
+        </button>
+
+        <div class="accordion-content">
+          <div class="accordion-inner">
+            <div class="accordion-text">{{ item.answer }}</div>
+          </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>

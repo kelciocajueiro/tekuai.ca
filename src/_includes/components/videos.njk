@@ -1,12 +1,6 @@
 {% set videos = i18n[lang.code].videos %}
 
-<div
-  style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  ">
+<div class="video-container">
   {% for video in videos %}
     <div class="video-card">
       <div class="video-wrapper">

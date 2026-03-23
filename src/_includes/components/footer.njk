@@ -1,6 +1,6 @@
 {% set footer = i18n[lang.code].footer %}
 
-<footer class="site-footer mt-8">
+<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="font-heading flex gap-0 text-[1.5rem] font-bold text-white">
@@ -40,11 +40,11 @@
     </div>
 
     <div>
-      <h4 class="footer-heading">Stay Updated</h4>
-      <p class="text-font mb-2 text-[0.9rem]">Get the latest AI automation tips straight to your inbox.</p>
+      <h4 class="footer-heading">{{ footer.newsletter.title }}</h4>
+      <p class="text-font mb-2 text-[0.9rem]">{{ footer.newsletter.subtitle }}</p>
 
       <form class="newsletter-form" onsubmit="event.preventDefault()">
-        <input type="email" class="glass-input" placeholder="Enter your email" required />
+        <input type="email" class="glass-input" placeholder="{{ footer.newsletter.email }}" required />
         <button type="submit" class="btn btn-primary btn-sm px-4 py-2.5">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -54,7 +54,11 @@
 
   <div class="footer-bottom">
     <div class="copyright">
-      &copy; {{ year | default(2026) }} {{ site.name | default("Teku AI") }}. All rights reserved.
+      <span x-data="{ year: new Date().getFullYear() }">
+        &copy;
+        <span x-text="year"></span>
+        {{ site.name | default("Teku AI") }}. {{ footer.rights }}
+      </span>
     </div>
   </div>
 </footer>
