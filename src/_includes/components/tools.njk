@@ -42,7 +42,7 @@
           {% for item in left %}
             <div class="tech-box" title="{{ item.label }}">
               <img
-                src="{{ ('/assets/icons/tools/' ~ item.icon ~ '.' ~ item.extension) | url }}"
+                src="{{ site.baseUrl }}assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
                 alt="{{ item.label }}"
                 loading="lazy" />
               <span>{{ item.label }}</span>
@@ -54,7 +54,7 @@
           {% for item in left %}
             <div class="tech-box">
               <img
-                src="{{ ('/assets/icons/tools/' ~ item.icon ~ '.' ~ item.extension) | url }}"
+                src="{{ site.baseUrl }}assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
                 alt="{{ item.label }}"
                 loading="lazy" />
               <span>{{ item.label }}</span>
@@ -69,7 +69,7 @@
           {% for item in right %}
             <div class="tech-box" title="{{ item.label }}">
               <img
-                src="{{ ('/assets/icons/tools/' ~ item.icon ~ '.' ~ item.extension) | url }}"
+                src="{{ site.baseUrl }}assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
                 alt="{{ item.label }}"
                 loading="lazy" />
               <span>{{ item.label }}</span>
@@ -81,7 +81,7 @@
           {% for item in right %}
             <div class="tech-box">
               <img
-                src="{{ ('/assets/icons/tools/' ~ item.icon ~ '.' ~ item.extension) | url }}"
+                src="{{ site.baseUrl }}assets/icons/tools/{{ item.icon }}.{{ item.extension }}"
                 alt="{{ item.label }}"
                 loading="lazy" />
               <span>{{ item.label }}</span>
