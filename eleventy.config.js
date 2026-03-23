@@ -72,7 +72,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './src/assets/icons': '/assets/icons' });
   eleventyConfig.addPassthroughCopy({ './src/assets/favicon.svg': '/favicon.svg' });
 
+  const pathPrefix = isProduction ? '/tekuai.ca/' : '/';
+
   return {
+    pathPrefix: pathPrefix,
     dir: {
       input: 'src',
       output: '_site',
