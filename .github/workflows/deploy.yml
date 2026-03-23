@@ -17,26 +17,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       NODE_ENV: production
       BASE_PATH: /tekuai.ca/
-      ACTIONS_STEP_DEBUG: true # 🔥 ativa debug verbose
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
-      # 🔍 DEBUG INICIAL
-      - name: 🧪 Debug - Environment
-        run: |
-          echo "PWD:"
-          pwd
-          echo "FILES:"
-          ls -la
-          echo "TREE:"
-          ls -R
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -44,48 +32,11 @@ jobs:
           node-version: 24
           cache: 'npm'
 
-      # 🔍 Verificar package.json
-      - name: 🧪 Debug - package.json
-        run: |
-          echo "Checking package.json..."
-          cat package.json || echo "❌ package.json NOT FOUND"
+      - name: Install dependencies
+        run: npm ci --include=dev
 
-      # 🔍 Ver dependências
-      - name: 🧪 Debug - npm list (before install)
-        run: npm list || true
-
-      - name: Install dependencies (debug)
-        run: |
-          echo "PWD:"
-          pwd
-
-          echo "FILES:"
-          ls -la
-
-          echo "PACKAGE.JSON CONTENT:"
-          cat package.json || echo "NO PACKAGE.JSON"
-
-          npm ci
-
-      # 🔍 Confirmar instalação
-      - name: 🧪 Debug - npm list (after install)
-        run: npm list || true
-
-      # 🔍 Ver Eleventy
-      - name: 🧪 Debug - Eleventy
-        run: |
-          npx @11ty/eleventy --version || echo "❌ Eleventy not found"
-
-      # 🔍 Build detalhado
-      - name: 🧪 Debug Build Eleventy
-        run: |
-          npx @11ty/eleventy --pathprefix=${{ env.BASE_PATH }} --verbose
-
-      # 🔍 Ver saída
-      - name: 🧪 Debug - Output folder
-        run: |
-          echo "_site contents:"
-          ls -la _site || echo "❌ _site NOT FOUND"
+      - name: Build Eleventy
+        run: npx @11ty/eleventy --pathprefix=${{ env.BASE_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
