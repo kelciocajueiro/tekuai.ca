@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Build Eleventy
-        run: npx @11ty/eleventy --pathPrefix=${{ env.BASE_PATH }}
+        run: npx @11ty/eleventy --pathprefix=${{ env.BASE_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
